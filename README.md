@@ -1,6 +1,5 @@
 # Netty+JavaFx实战：仿桌面版微信聊天
 
-## 一、介绍
 
 >本项目是作者小傅哥使用```JavaFx```、```Netty4.x```、```SpringBoot```、```Mysql```等技术栈和偏向于DDD领域驱动设计方式，搭建的仿桌面版微信聊天工程实现通信核心功能。如果本项目能为您提供帮助，请给予支持(关注、点赞、分享)！
 
@@ -20,6 +19,9 @@
 因此我们非常有必要学习 Netty，那么为了让大家更好的快速学习上手，我们拿一个熟悉又有趣的场景“PC端微信聊天”作为我们的目标项目。来让 Java 程序员使用自己熟悉的编程语言加上JavaFx、Netty4.x、SpringBoot、Mysql等技术栈和偏向于DDD领域驱动设计方式，搭建的仿桌面版微信聊天工程实现通信核心功能。从而学会Netty的同时，也做出合理的架构和干净的编码。
 
 ## 二、工程源码
+
+- [github](https://gitee.com/itstack/NaiveChat)
+- [gitee](https://gitee.com/itstack/NaiveChat)
 
 ![](https://bugstack.cn/assets/images/2020/project.jpg)
 
