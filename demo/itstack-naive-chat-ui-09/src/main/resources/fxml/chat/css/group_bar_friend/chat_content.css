@@ -1,0 +1,39 @@
+/*内容栏；新的朋友、公众号、群组、好友，明细信息(发送消息按钮)*/
+#content{
+    -fx-border-width: 0;
+    -fx-background-color: #f5f5f5;
+}
+
+#content_pane{
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #e7e7e7;
+}
+
+#content_name{
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #000000;
+    -fx-font-size: 24px;
+    -fx-cursor: hand;
+}
+
+.friendUserDetailContent,.friendGroupDetailContent{
+   -fx-background-color: transparent;
+}
+
+.friendUserSendMsgButton,.friendUserSendMsgButton:pressed,.friendGroupSendMsgButton,.friendGroupSendMsgButton:pressed{
+    -fx-background-size: 175px 50px;
+    -fx-background-color: #1aad19;
+    -fx-cursor: hand;
+    -fx-border-width: 1px;
+    -fx-border-color: #1aad19;
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-alignment: center;
+}
+
+.friendUserSendMsgButton:hover,.friendGroupSendMsgButton:hover{
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #129611;
+    -fx-background-color: #129611;
+}

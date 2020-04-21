@@ -1,0 +1,94 @@
+/* 控制栏 */
+#bar{
+   -fx-background-color:#28282c;
+   -fx-background-radius: 4px 0px 0px 4px;
+}
+
+#bar_portrait,#bar_portrait:hover,#bar_portrait:pressed{
+    -fx-background-radius: 2px;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px;
+    -fx-background-color: white;
+    -fx-background-image: url("/fxml/chat/img/head/01_50.png");
+    -fx-cursor: hand;
+    -fx-border-width: 1px;
+    -fx-border-radius: 2px;
+    -fx-border-color: white;
+}
+
+#bar_chat{
+    -fx-background-radius: 2px;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("/fxml/chat/img/system/chat_2.png");
+    -fx-cursor: hand;
+    -fx-border-width: 1px;
+    -fx-border-radius: 2px;
+    -fx-border-color: transparent;
+}
+
+#bar_friend{
+    -fx-background-radius: 2px;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("/fxml/chat/img/system/friend_0.png");
+    -fx-cursor: hand;
+    -fx-border-width: 1px;
+    -fx-border-radius: 2px;
+    -fx-border-color: transparent;
+}
+/* 测试事件注释，使用java代码控制；setOnAction、setOnMouseEntered、setOnMouseExited
+#bar_friend:hover{
+    -fx-background-image: url("/fxml/chat/img/system/friend_1.png");
+}
+
+#bar_friend:pressed{
+    -fx-background-image: url("/fxml/chat/img/system/friend_2.png");
+}*/
+
+#bar_location{
+        -fx-background-radius: 2px;
+        -fx-background-position: center center;
+        -fx-background-repeat: no-repeat;
+        -fx-background-size: 30px 30px;
+        -fx-background-color: transparent;
+        -fx-background-image: url("/fxml/chat/img/system/location_0.png");
+        -fx-cursor: hand;
+        -fx-border-width: 1px;
+        -fx-border-radius: 2px;
+        -fx-border-color: transparent;
+}
+
+#bar_location:hover{
+    -fx-background-image: url("/fxml/chat/img/system/location_1.png");
+}
+
+#bar_location:pressed{
+    -fx-background-image: url("/fxml/chat/img/system/location_2.png");
+}
+
+#bar_set{
+        -fx-background-radius: 2px;
+        -fx-background-position: center center;
+        -fx-background-repeat: no-repeat;
+        -fx-background-size: 20px 20px;
+        -fx-background-color: transparent;
+        -fx-background-image: url("/fxml/chat/img/system/set_0.png");
+        -fx-cursor: hand;
+        -fx-border-width: 1px;
+        -fx-border-radius: 2px;
+        -fx-border-color: transparent;
+}
+
+#bar_set:hover{
+    -fx-background-image: url("/fxml/chat/img/system/set_1.png");
+}
+
+#bar_set:pressed{
+    -fx-background-image: url("/fxml/chat/img/system/set_2.png");
+}

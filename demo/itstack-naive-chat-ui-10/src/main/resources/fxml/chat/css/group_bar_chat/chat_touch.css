@@ -1,0 +1,23 @@
+#touch{
+    -fx-border-width: 0;
+    -fx-border-color: rgb(180,180,180);
+    -fx-background-color: white;
+}
+
+#touch_send,#touch_send:pressed{
+    -fx-background-size: 43px 43px;
+    -fx-background-color: #f5f5f5;
+    -fx-cursor: hand;
+    -fx-border-width: 1px;
+    -fx-border-color: #e5e5e5;
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #606060;
+    -fx-font-size: 18px;
+    -fx-alignment: center;
+}
+
+#touch_send:hover{
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #129611;
+    -fx-background-color: #129611;
+}

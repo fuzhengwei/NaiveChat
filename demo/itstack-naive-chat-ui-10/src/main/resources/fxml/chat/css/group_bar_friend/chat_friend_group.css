@@ -1,0 +1,60 @@
+.elementFriendGroupList{
+    -fx-background-color:transparent;
+    -fx-text-fill:black;
+    -fx-border-width: 0;
+}
+
+.elementFriendGroupList_listView{
+    -fx-background-color: transparent;
+}
+
+.elementFriendGroupList_listView .scroll-bar:vertical .track,
+.elementFriendGroupList_listView .scroll-bar:horizontal .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+
+.elementFriendGroupList_listView .scroll-bar:horizontal .increment-button,
+.elementFriendGroupList_listView .scroll-bar:horizontal .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 0 0;
+}
+
+.elementFriendGroupList_listView .scroll-bar:vertical .increment-button,
+.elementFriendGroupList_listView .scroll-bar:vertical .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 -1500 0;
+}
+
+.elementFriendGroupList_listView .scroll-bar .increment-button,
+.elementFriendGroupList_listView .scroll-bar .decrement-button{
+  -fx-shape: " ";
+  -fx-padding:0;
+}
+
+.elementFriendGroupList_listView .scroll-bar:vertical  .thumb,
+.elementFriendGroupList_listView .scroll-bar:horizontal  .thumb{
+ -fx-background-color:derive(#c7c6c6, 10%);
+ -fx-background-insets: 2, 0, 0;
+ -fx-background-radius: 1em;
+}
+
+.elementFriendGroupList_listView .scroll-bar:vertical,
+.elementFriendGroupList_listView .scroll-bar:horizontal{
+   -fx-pref-width: 10;
+   -fx-background-color:transparent;
+}
+
+.elementFriendGroupList_listView .list-cell {
+    -fx-background-color: #eeebe8;
+    -fx-text-fill: black;
+}
+
+.elementFriendGroupList_listView .list-cell:selected{
+    -fx-background-color: derive(#c7c6c6, 10%);
+    -fx-text-fill: black;
+}

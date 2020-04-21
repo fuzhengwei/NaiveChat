@@ -1,0 +1,85 @@
+#login{
+    -fx-background-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-border-color: rgb(180,180,180);
+    -fx-background-color: white;
+}
+
+#operation{
+   -fx-border-color: rgb(180,180,180);
+   -fx-border-width: 1px 1px 0 1px;
+   -fx-border-radius: 4px 4px 0 0;
+   -fx-background-image: url("/fxml/login/img/system/show.png");
+}
+
+.close,.close:pressed{
+    -fx-background-radius: 2px;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 43px 34px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("/fxml/login/img/system/close_0.png");
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.close:hover{
+    -fx-background-color: #f45454;
+    -fx-background-image: url("/fxml/login/img/system/close_1.png");
+    -fx-border-width: 1px 1px 0 0;
+    -fx-border-color: rgb(180,180,180);
+    -fx-border-radius: 2px;
+}
+
+.min,.min:pressed{
+    -fx-background-radius: 2px;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 43px 34px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("/fxml/login/img/system/min_0.png");
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.min:hover{
+    -fx-background-color: derive(#c7c6c6, 10%);
+    -fx-background-image: url("/fxml/login/img/system/min_1.png");
+    -fx-border-width: 1px 0 0 0;
+    -fx-border-color: rgb(180,180,180);
+    -fx-border-radius: 2px;
+}
+
+#headImg{
+    -fx-background-color: #f1f1f1;
+    -fx-background-radius: 4px;
+    -fx-border-width: 2px;
+    -fx-border-color: #f1f1f1;
+    -fx-border-radius: 4px;
+    -fx-background-image: url("/fxml/login/img/system/head_default_100.png");
+}
+
+.login_button,.login_button:pressed{
+    -fx-background-size: 43px 43px;
+    -fx-background-color: #f5f5f5;
+    -fx-cursor: hand;
+    -fx-border-width: 1px;
+    -fx-border-radius: 2px;
+    -fx-border-color: #e5e5e5;
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #999999;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.login_button:hover{
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #129611;
+    -fx-background-color: #129611;
+}
+
+#slogan{
+    -fx-text-fill: #999999;
+}

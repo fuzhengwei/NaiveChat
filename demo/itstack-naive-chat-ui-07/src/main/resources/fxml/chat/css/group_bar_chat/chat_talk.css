@@ -1,0 +1,130 @@
+#talk{
+    -fx-border-width: 0;
+    -fx-background-color: #eeebe8;
+}
+
+.talkListStyle .scroll-bar:vertical .track,
+.talkListStyle .scroll-bar:horizontal .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+
+.talkListStyle .scroll-bar:horizontal .increment-button,
+.talkListStyle .scroll-bar:horizontal .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 0 0;
+}
+
+.talkListStyle .scroll-bar:vertical .increment-button,
+.talkListStyle .scroll-bar:vertical .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 -1500 0;
+}
+
+.talkListStyle .scroll-bar .increment-button,
+.talkListStyle .scroll-bar .decrement-button{
+  -fx-shape: " ";
+  -fx-padding:0;
+}
+
+.talkListStyle .scroll-bar:vertical  .thumb,
+.talkListStyle .scroll-bar:horizontal  .thumb{
+ -fx-background-color:derive(#c7c6c6, 10%);
+ -fx-background-insets: 2, 0, 0;
+ -fx-background-radius: 1em;
+}
+
+.talkListStyle .scroll-bar:vertical,
+.talkListStyle .scroll-bar:horizontal{
+   -fx-pref-width: 10;
+   -fx-background-color:transparent;
+}
+
+#talkList{
+   -fx-background-color:transparent;
+}
+
+#talkList .list-cell {
+    -fx-background-color: #eeebe8;
+    -fx-text-fill: black;
+    -fx-font-family: "Forte";
+    -fx-font-weight: bold;
+}
+
+#talkList .list-cell:selected{
+    -fx-background-color: derive(#c7c6c6, 10%);
+    -fx-text-fill: black;
+    -fx-font-family: "Forte";
+    -fx-font-weight: bold;
+}
+
+.talkElement{
+    -fx-background-color:transparent;
+    -fx-text-fill:black;
+}
+
+.element_head{
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px;
+    -fx-background-color: white;
+    -fx-background-image: url("/fxml/chat/img/system/head_default_5050.png");
+}
+
+.element_nikeName{
+    /*-fx-background-color: red;*/
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-white-space: nowrap;
+    -fx-overflow: hidden;
+    -fx-text-overflow: ellipsis;
+    -fx-text-align: left;
+}
+
+.element_msgSketch{
+   /*-fx-background-color: yellow;*/
+   -fx-font-family: "微软雅黑";
+   -fx-text-fill: #999999;
+   -fx-font-size: 12px;
+   -fx-white-space: nowrap;
+   -fx-overflow: hidden;
+   -fx-text-overflow: ellipsis;
+   -fx-text-align: left;
+}
+
+.element_msgData{
+   /*-fx-background-color: blue;*/
+   -fx-font-family: "微软雅黑";
+   -fx-text-fill: #999999;
+   -fx-font-size: 12px;
+   -fx-white-space: nowrap;
+   -fx-overflow: hidden;
+   -fx-text-overflow: ellipsis;
+   -fx-alignment: center-right;
+}
+
+.element_msgRemind{
+   -fx-background-color: red;
+   -fx-border-width: 1px;
+   -fx-border-radius: 100px;
+   -fx-background-color: red;
+   -fx-background-radius: 100px;
+   -fx-font-family: "微软雅黑";
+   -fx-text-fill: white;
+   -fx-font-size: 10px;
+   -fx-alignment: center; 
+}
+
+.element_delete{
+   -fx-background-color:transparent;
+   -fx-cursor: hand;
+   -fx-border-width: 0;
+   -fx-background-image: url("/fxml/chat/img/system/talk_delete.png");
+   -fx-background-position: center center;
+   -fx-background-repeat: no-repeat;
+}

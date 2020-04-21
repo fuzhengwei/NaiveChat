@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.itstack</groupId>
+    <artifactId>demo</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>itstack-naive-chat-ui-01</module>
+        <module>itstack-naive-chat-ui-02</module>
+        <module>itstack-naive-chat-ui-03</module>
+        <module>itstack-naive-chat-ui-04</module>
+        <module>itstack-naive-chat-ui-05</module>
+        <module>itstack-naive-chat-ui-06</module>
+        <module>itstack-naive-chat-ui-07</module>
+        <module>itstack-naive-chat-ui-08</module>
+        <module>itstack-naive-chat-ui-09</module>
+        <module>itstack-naive-chat-ui-10</module>
+        <module>itstack-naive-chat-server-01</module>
+        <module>itstack-naive-chat-server-02</module>
+        <module>itstack-naive-chat-server-03</module>
+        <module>itstack-naive-chat-server-04</module>
+        <module>itstack-naive-chat-server-05</module>
+        <module>itstack-naive-chat-client-01</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.7.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <netty_version>4.1.36.Final</netty_version>
+        <protostuff.version>1.0.10</protostuff.version>
+        <objenesis.version>2.4</objenesis.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Netty 4.1.36 -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty_version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>demo</finalName>
+        <plugins>
+            <!-- 编译plugin -->
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <!-- resources 编码 -->
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.3</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <!-- Source attach plugin -->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.0.4</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,151 @@
+.elementFriendLuckDetail{
+    -fx-background-color: transparent;
+}
+
+.friendLuckPane{
+   -fx-background-color:transparent;
+}
+
+.friendLuckListView{
+   -fx-background-color:transparent;
+}
+
+.friendLuckListView .scroll-bar:vertical .track,
+.friendLuckListView .scroll-bar:horizontal .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+
+.friendLuckListView .scroll-bar:horizontal .increment-button,
+.friendLuckListView .scroll-bar:horizontal .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 0 0;
+}
+
+.friendLuckListView .scroll-bar:vertical .increment-button,
+.friendLuckListView .scroll-bar:vertical .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 -1500 0;
+}
+
+.friendLuckListView .scroll-bar .increment-button,
+.friendLuckListView .scroll-bar .decrement-button{
+  -fx-shape: " ";
+  -fx-padding:0;
+}
+
+.friendLuckListView .scroll-bar:vertical  .thumb,
+.friendLuckListView .scroll-bar:horizontal  .thumb{
+ -fx-background-color:derive(#c7c6c6, 10%);
+ -fx-background-insets: 2, 0, 0;
+ -fx-background-radius: 1em;
+}
+
+.friendLuckListView .scroll-bar:vertical,
+.friendLuckListView .scroll-bar:horizontal{
+   -fx-pref-width: 10;
+   -fx-background-color:transparent;
+}
+
+.friendLuckListView .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.friendLuckListView .list-cell:selected{
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.friendLuckListView .scroll-bar:horizontal .increment-arrow,
+.friendLuckListView .scroll-bar:horizontal .decrement-arrow,
+.friendLuckListView .scroll-bar:horizontal .increment-button,
+.friendLuckListView .scroll-bar:horizontal .decrement-button {
+    -fx-padding:0;
+}
+
+.elementFriendLuckUser_head{
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px;
+    -fx-background-color: white;
+    -fx-background-radius: 2px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 2px;
+}
+
+.elementFriendLuckUser_name{
+  -fx-font-family: "微软雅黑";
+  -fx-text-fill: #000000;
+  -fx-font-size: 12px;
+  -fx-font-weight: bold;
+  -fx-white-space: nowrap;
+  -fx-overflow: hidden;
+  -fx-text-overflow: ellipsis;
+  -fx-text-align: left;
+}
+
+.elementFriendLuckUser_id{
+   -fx-font-family: "微软雅黑";
+   -fx-text-fill: #999999;
+   -fx-font-size: 12px;
+   -fx-white-space: nowrap;
+   -fx-overflow: hidden;
+   -fx-text-overflow: ellipsis;
+   -fx-text-align: left;
+}
+
+.friendLuckSearch{
+   -fx-font-family: "微软雅黑";
+   -fx-text-fill: #000000;
+   -fx-font-size: 16px;
+}
+
+/** 添加好友 **/
+.elementFriendLuckUser_statusLabel_0,.elementFriendLuckUser_statusLabel_0:pressed{
+    -fx-background-color: #129611;
+    -fx-text-align: center;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-background-radius: 2px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 2px;
+}
+
+.elementFriendLuckUser_statusLabel_0:hover{
+    -fx-background-color: #1aad19;
+}
+
+.elementFriendLuckUser_statusLabel_1,.elementFriendLuckUser_statusLabel_0:pressed{
+    -fx-background-color: #129611;
+    -fx-text-align: center;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-background-radius: 2px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 2px;
+}
+
+.elementFriendLuckUser_statusLabel_1:hover{
+    -fx-background-color: #1aad19;
+}
+
+.elementFriendLuckUser_statusLabel_2,.elementFriendLuckUser_statusLabel_0:pressed,.elementFriendLuckUser_statusLabel_2:hover{
+    -fx-text-align: center;
+    -fx-text-fill: #999999;
+    -fx-alignment: center;
+}
+
+.elementFriendLuckUser{
+}
+
+.elementFriendLuck_line{
+   -fx-border-width: 0 0 1px 0;
+   -fx-border-color: derive(#c7c6c6, 30%);
+}

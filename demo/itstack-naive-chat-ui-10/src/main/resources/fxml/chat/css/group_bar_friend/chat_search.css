@@ -1,0 +1,37 @@
+.search{
+    -fx-background-color: #eeebe8;
+}
+
+.searchInput{
+    -fx-border-width: 0;
+    -fx-background-color: #dbd9d8;
+    -fx-background-radius: 8px;
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-background-image: url("/fxml/chat/img/system/search_0.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 0px center;
+}
+
+.searchInput:focused{
+    -fx-border-width: 2;
+    -fx-border-color: #dbd9d8;
+    -fx-border-radius:8px;
+    -fx-background-color: #f6f6f5;
+}
+
+.searchAdd{
+    -fx-background-color: #dbd9d8;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #dbd9d8;
+    -fx-cursor: hand;
+    -fx-background-image: url("/fxml/chat/img/system/add_0.png");
+}
+
+.searchAdd:hover{
+    -fx-background-color: #d1d1d1;
+    -fx-border-color: #d1d1d1;
+}

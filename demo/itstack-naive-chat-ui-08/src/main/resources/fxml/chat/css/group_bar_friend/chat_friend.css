@@ -1,0 +1,116 @@
+@import "chat_friend_group.css"
+@import "chat_friend_luck.css"
+@import "chat_friend_user.css"
+
+#friend{
+    -fx-border-width: 0;
+    -fx-background-color: #eeebe8;
+}
+
+.friendListStyle{
+   -fx-background-color:transparent;
+}
+
+.friendListStyle .scroll-bar:vertical .track,
+.friendListStyle .scroll-bar:horizontal .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+
+.friendListStyle .scroll-bar:horizontal .increment-button,
+.friendListStyle .scroll-bar:horizontal .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 0 0;
+}
+
+.friendListStyle .scroll-bar:vertical .increment-button,
+.friendListStyle .scroll-bar:vertical .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 -1500 0;
+}
+
+.friendListStyle .scroll-bar .increment-button,
+.friendListStyle .scroll-bar .decrement-button{
+  -fx-shape: " ";
+  -fx-padding:0;
+}
+
+.friendListStyle .scroll-bar:vertical  .thumb,
+.friendListStyle .scroll-bar:horizontal  .thumb{
+ -fx-background-color:derive(#c7c6c6, 10%);
+ -fx-background-insets: 2, 0, 0;
+ -fx-background-radius: 1em;
+}
+
+.friendListStyle .scroll-bar:vertical,
+.friendListStyle .scroll-bar:horizontal{
+   -fx-pref-width: 10;
+   -fx-background-color:transparent;
+}
+
+.friendListStyle .list-cell {
+    -fx-background-color: #eeebe8;
+    -fx-text-fill: black;
+}
+
+.friendListStyle .list-cell:selected{
+    -fx-background-color: derive(#c7c6c6, 10%);
+    -fx-text-fill: black;
+}
+
+.friendListStyle .scroll-bar:horizontal .increment-arrow,
+.friendListStyle .scroll-bar:horizontal .decrement-arrow,
+.friendListStyle .scroll-bar:horizontal .increment-button,
+.friendListStyle .scroll-bar:horizontal .decrement-button {
+    -fx-padding:0;
+}
+
+.elementFriendLuck,.elementFriendSubscription{
+    -fx-background-color:transparent;
+    -fx-text-fill:black;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: derive(#c7c6c6, 10%);
+}
+
+.elementFriendLuck_head,.elementFriendSubscription_head,.elementFriendGroup_head,.elementFriendUser_head{
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50px 50px;
+    -fx-background-color: transparent;
+    -fx-background-radius: 2px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 2px;
+}
+
+.elementFriendLuck_head{
+    -fx-background-image: url("/fxml/chat/img/system/friend_luck_50.png");
+}
+
+.elementFriendSubscription_head{
+    -fx-background-image: url("/fxml/chat/img/system/friend_group_50.png");
+}
+
+.elementFriendLuck_name,.elementFriendSubscription_name,.elementFriendGroup_name,.elementFriendUser_name{
+     -fx-font-family: "微软雅黑";
+     -fx-text-fill: #000000;
+     -fx-font-size: 18px;
+     -fx-white-space: nowrap;
+     -fx-overflow: hidden;
+     -fx-text-overflow: ellipsis;
+     -fx-text-align: left;
+}
+
+.element_friend_tag{
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-alignment: center-left;
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #999999;
+    -fx-font-size: 14px;
+}
+

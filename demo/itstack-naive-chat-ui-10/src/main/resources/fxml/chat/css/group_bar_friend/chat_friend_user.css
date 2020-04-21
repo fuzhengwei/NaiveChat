@@ -1,0 +1,60 @@
+.friendUserList{
+    -fx-background-color:transparent;
+    -fx-text-fill:black;
+    -fx-border-width: 0;
+}
+
+.elementFriendUser_listView{
+    -fx-background-color: transparent;
+}
+
+.elementFriendUser_listView .scroll-bar:vertical .track,
+.elementFriendUser_listView .scroll-bar:horizontal .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+
+.elementFriendUser_listView .scroll-bar:horizontal .increment-button,
+.elementFriendUser_listView .scroll-bar:horizontal .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 0 0;
+}
+
+.elementFriendUser_listView .scroll-bar:vertical .increment-button,
+.elementFriendUser_listView .scroll-bar:vertical .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 -1500 0;
+}
+
+.elementFriendUser_listView .scroll-bar .increment-button,
+.elementFriendUser_listView .scroll-bar .decrement-button{
+  -fx-shape: " ";
+  -fx-padding:0;
+}
+
+.elementFriendUser_listView .scroll-bar:vertical  .thumb,
+.elementFriendUser_listView .scroll-bar:horizontal  .thumb{
+ -fx-background-color:derive(#c7c6c6, 10%);
+ -fx-background-insets: 2, 0, 0;
+ -fx-background-radius: 1em;
+}
+
+.elementFriendUser_listView .scroll-bar:vertical,
+.elementFriendUser_listView .scroll-bar:horizontal{
+   -fx-pref-width: 10;
+   -fx-background-color:transparent;
+}
+
+.elementFriendUser_listView .list-cell {
+    -fx-background-color: #eeebe8;
+    -fx-text-fill: black;
+}
+
+.elementFriendUser_listView .list-cell:selected{
+    -fx-background-color: derive(#c7c6c6, 10%);
+    -fx-text-fill: black;
+}

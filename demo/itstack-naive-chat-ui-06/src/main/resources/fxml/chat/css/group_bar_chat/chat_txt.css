@@ -1,0 +1,76 @@
+#txt{
+    -fx-border-width: 0;
+    -fx-border-color: rgb(180,180,180);
+    -fx-background-color: white;
+}
+
+#txt_input{
+   -fx-border-width: 0;
+   -fx-background-color: transparent;
+   -fx-font-family: "微软雅黑";
+   -fx-text-fill: #000000;
+   -fx-font-size: 18px;
+   -fx-control-inner-background:transparent;
+   -fx-control-inner-radius:0px;
+   -fx-border-radius: 0px;
+   -fx-border-color: transparent;
+   -fx-white-space: nowrap;
+   -fx-overflow: hidden;
+   -fx-text-overflow: ellipsis;
+   -fx-text-align: left;
+}
+
+#txt_input{
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+#txt_input .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+#txt_input:focused {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.txt_input_style .scroll-bar:vertical .track,
+.txt_input_style .scroll-bar:horizontal .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+
+.txt_input_style .scroll-bar:horizontal .increment-button,
+.txt_input_style .scroll-bar:horizontal .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 0 0;
+}
+
+.txt_input_style .scroll-bar:vertical .increment-button,
+.txt_input_style .scroll-bar:vertical .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 -1500 0;
+}
+
+.txt_input_style .scroll-bar .increment-button,
+.txt_input_style .scroll-bar .decrement-button{
+  -fx-shape: " ";
+  -fx-padding:0;
+}
+
+.txt_input_style .scroll-bar:vertical  .thumb,
+.txt_input_style .scroll-bar:horizontal  .thumb{
+ -fx-background-color:derive(#c7c6c6, 10%);
+ -fx-background-insets: 2, 0, 0;
+ -fx-background-radius: 1em;
+}
+
+.txt_input_style .scroll-bar:vertical,
+.txt_input_style .scroll-bar:horizontal{
+   -fx-pref-width: 10;
+   -fx-background-color:transparent;
+}
+
