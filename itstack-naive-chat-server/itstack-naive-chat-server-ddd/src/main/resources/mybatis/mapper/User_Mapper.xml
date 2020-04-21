@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.itstack.naive.chat.infrastructure.dao.IUserDao">
+
+    <select id="queryUserPassword" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT userPassword FROM user where userId = #{userId}
+    </select>
+
+    <select id="queryUserById" parameterType="java.lang.String" resultType="org.itstack.naive.chat.infrastructure.po.User">
+        select userId, userNickName, userHead from user where userId = #{userId}
+    </select>
+
+    <select id="queryFuzzyUserList" parameterType="java.lang.String" resultType="org.itstack.naive.chat.infrastructure.po.User">
+        select userId, userNickName, userHead
+        from user where userId != #{userId} and (userId like "%"#{searchKey}"%" or userNickName like "%"#{searchKey}"%")
+        order by id desc
+        limit 10
+    </select>
+
+    <select id="queryChannelUserCount" parameterType="org.itstack.naive.chat.domain.inet.model.ChannelUserReq" resultType="java.lang.Long">
+        select count(id)
+        from user
+        <where>
+            <if test="null != userId">
+                and userId = #{userId}
+            </if>
+            <if test="null != userNickName">
+                and userNickName like "%"#{userNickName}"%"
+            </if>
+        </where>
+    </select>
+
+    <select id="queryChannelUserList" parameterType="org.itstack.naive.chat.domain.inet.model.ChannelUserReq" resultType="org.itstack.naive.chat.infrastructure.po.User">
+        select userId, userNickName, userHead
+        from user
+        <where>
+            <if test="null != userId">
+                and userId = #{userId}
+            </if>
+            <if test="null != userNickName">
+                and userNickName like "%"#{userNickName}"%"
+            </if>
+        </where>
+        order by id desc
+        limit #{pageStart},#{pageEnd}
+    </select>
+
+</mapper>

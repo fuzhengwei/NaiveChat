@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.itstack.naive.chat.infrastructure.dao.ITalkBoxDao">
+
+    <select id="queryTalkBoxList" parameterType="java.lang.String" resultType="org.itstack.naive.chat.infrastructure.po.TalkBox">
+        select talkId, talkType from talk_box where userId = #{userId}
+    </select>
+
+    <insert id="addTalkBox" parameterType="org.itstack.naive.chat.infrastructure.po.TalkBox">
+        INSERT INTO talk_box
+        ( userId, talkId, talkType, createTime, updateTime )
+        VALUES
+        ( #{userId}, #{talkId}, #{talkType}, now(), now())
+    </insert>
+
+    <delete id="deleteUserTalk" parameterType="java.lang.String">
+        delete from talk_box where userId = #{userId} and talkId = #{talkId}
+    </delete>
+
+    <select id="queryTalkBox" parameterType="java.lang.String" resultType="org.itstack.naive.chat.infrastructure.po.TalkBox">
+        select id from talk_box where userId = #{userId} and talkId = #{talkId}
+    </select>
+
+    <select id="queryTalkBoxGroupsIdList" parameterType="java.lang.String" resultType="java.lang.String">
+        select talkId from talk_box where talkType = 1 and userId = #{userId}
+    </select>
+
+</mapper>

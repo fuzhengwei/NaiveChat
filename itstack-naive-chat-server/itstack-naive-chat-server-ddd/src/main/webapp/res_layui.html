@@ -1,0 +1,33 @@
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="/res/lib/layui-v2.5.4/css/layui.css" media="all">
+<link rel="stylesheet" href="/res/css/public.css" media="all">
+
+<script src="/res/lib/layui-v2.5.4/layui.js" charset="utf-8"></script>
+<script src="/res/js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+
+<script>
+    globalUtil = {
+        //field="number|dateBegin|dateEnd"
+        serializeObject: function (obj) {
+            for (var c in obj) {
+                if (obj[c].length === 0) {
+                    obj[c] = null;
+                    continue;
+                }
+                //long
+                if (obj[c].indexOf(".") !== -1) {
+                    obj[c] = parseFloat(obj[c]);
+                    continue;
+                }
+                //int
+                if (obj[c].indexOf(".") === -1) {
+                    obj[c] = parseInt(obj[c]);
+                }
+            }
+            return obj;
+        }
+    }
+
+</script>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.itstack.naive.chat.infrastructure.dao.IChatRecordDao">
+
+    <insert id="appendChatRecord" parameterType="org.itstack.naive.chat.infrastructure.po.ChatRecord">
+        INSERT INTO chat_record
+        ( userId, friendId, talkType, msgContent, msgType, msgDate, createTime, updateTime )
+        VALUES
+        ( #{userId}, #{friendId}, #{talkType}, #{msgContent}, #{msgType}, #{msgDate}, now(), now() )
+    </insert>
+
+    <select id="queryUserChatRecordList" parameterType="java.lang.String" resultType="org.itstack.naive.chat.infrastructure.po.ChatRecord">
+        SELECT userId, friendId, msgContent, msgType, msgDate
+        FROM chat_record
+        where talkType = 0 and (friendId = #{talkId} and userId = #{userId}) or (friendId = #{userId} and userId = #{talkId})
+        order by createTime desc
+        limit 10
+    </select>
+
+    <select id="queryGroupsChatRecordList" parameterType="java.lang.String" resultType="org.itstack.naive.chat.infrastructure.po.ChatRecord">
+        SELECT userId, friendId, msgContent, msgType, msgDate
+        FROM chat_record
+        where talkType = 1 and friendId = #{talkId}
+        order by createTime desc
+        limit 10
+    </select>
+
+</mapper>

@@ -1,0 +1,43 @@
+{
+  "clearInfo": {
+    "clearUrl": "/res/api/clear.json"
+  },
+  "homeInfo": {
+    "title": "首页",
+    "icon": "fa fa-home",
+    "href": "/res/page/welcome.html"
+  },
+  "logoInfo": {
+    "title": "憨憨语约 · 服务台",
+    "image": "/res/images/logo.png",
+    "href": ""
+  },
+  "menuInfo": {
+    "currency": {
+      "title": "服务管理",
+      "icon": "fa fa-address-book",
+      "child": [
+        {
+          "title": "控制中心",
+          "href": "",
+          "icon": "fa fa-calendar",
+          "target": "_self",
+          "child": [
+            {
+              "title": "NettyServer",
+              "href": "/chat/server/server.html",
+              "icon": "fa fa-list-alt",
+              "target": "_self"
+            },
+            {
+              "title": "用户信息",
+              "href": "/chat/user/user.html",
+              "icon": "fa fa-list-alt",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

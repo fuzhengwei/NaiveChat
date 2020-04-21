@@ -1,0 +1,55 @@
+#form {
+    padding: 10px;
+}
+
+.form__paragraph {
+    position: relative;
+    max-width: 600px;
+    padding: 1rem 100px 1rem 1rem;
+}
+
+.form__paragraph__del {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.form__banner {
+    padding: 1rem;
+}
+
+/*表单图片上传*/
+.form__inputImage {
+    position: relative;
+    display: inline-block;
+}
+
+.form__inputImage__image {
+    position: relative;
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.form__inputImage__del {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0,0.2);
+    color: #FFF;
+    cursor: pointer;
+}
+
+.form__inputImage__shadow {
+    display: none;
+}
+
+/*图片展示*/
+.form__image {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+}

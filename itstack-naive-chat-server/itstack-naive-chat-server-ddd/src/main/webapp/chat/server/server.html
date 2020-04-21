@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>NettyServer</title>
+    <link rel="import" href="/res_layui.html"/>
+    <script src="js/server.js"></script>
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <fieldset class="layui-elem-field layuimini-search">
+            <legend>搜索信息</legend>
+            <div style="margin: 10px 10px 10px 10px">
+                <form class="layui-form layui-form-pane" action="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <a class="layui-btn" lay-submit="" lay-filter="data-search-btn">搜索</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<table class="layui-table" lay-data="{height: 'full', cellMinWidth: 80, page: true, limit:15, url:'/api/queryNettyServerInfo'}">
+    <thead>
+    <tr>
+        <th lay-data="{type:'checkbox'}"></th>
+        <th lay-data="{field:'ip', align: 'left' }">IP</th>
+        <th lay-data="{field:'port', align: 'left'}">端口</th>
+        <th lay-data="{field:'status', width:80, align: 'center', templet: util.statusInfo }">状态</th>
+    </tr>
+    </thead>
+</table>
+
+</body>
+</html>

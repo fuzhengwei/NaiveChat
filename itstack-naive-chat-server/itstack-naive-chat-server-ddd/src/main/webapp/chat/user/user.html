@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户中心</title>
+    <link rel="import" href="/res_layui.html"/>
+    <script src="js/user.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/user.css">
+</head>
+<body>
+
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <fieldset class="layui-elem-field layuimini-search">
+            <legend>搜索信息</legend>
+            <div style="margin: 10px 10px 10px 10px">
+                <form class="layui-form layui-form-pane" action="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">用户ID：</label>
+                            <div class="layui-input-inline">
+                                <input class="layui-input" autocomplete="off" name="userId" id="userId" placeholder="请输入用户ID"/>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">用户昵称：</label>
+                            <div class="layui-input-inline">
+                                <input class="layui-input" autocomplete="off" name="userNickName" id="userNickName" placeholder="请输入用户昵称"/>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <a class="layui-btn" lay-submit="" lay-filter="data-search-btn">搜索</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<table class="layui-table" id="userTable" lay-data="{height: 'full', cellMinWidth: 80, page: true, limit:15, url:'/api/queryChannelUserList'}">
+    <thead>
+    <tr>
+        <th lay-data="{type:'checkbox'}"></th>
+        <th lay-data="{field:'userId', align: 'left' }">用户ID</th>
+        <th lay-data="{field:'userNickName', align: 'left'}">昵称</th>
+        <th lay-data="{field:'userHead', width:80, align: 'center', templet: util.userHeadInfo}">头像</th>
+        <th lay-data="{field:'status', width:80, align: 'center', templet: util.statusInfo }">状态</th>
+    </tr>
+    </thead>
+</table>
+
+</body>
+</html>

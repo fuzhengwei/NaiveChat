@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <package name="org.itstack.naive.chat.infrastructure.po.ChatRecord"/>
+        <package name="org.itstack.naive.chat.infrastructure.po.Groups"/>
+        <package name="org.itstack.naive.chat.infrastructure.po.TalkBox"/>
+        <package name="org.itstack.naive.chat.infrastructure.po.User"/>
+        <package name="org.itstack.naive.chat.infrastructure.po.UserFriend"/>
+        <package name="org.itstack.naive.chat.infrastructure.po.UserGroup"/>
+    </typeAliases>
+</configuration>
