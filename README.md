@@ -21,7 +21,7 @@
 ## 二、工程源码
 
 **源码地址**：
-- [https://gitee.com/itstack/NaiveChat](https://gitee.com/itstack/NaiveChat)
+- [https://github.com/fuzhengwei/NaiveChat](https://github.com/fuzhengwei/NaiveChat)
 - [https://gitee.com/itstack/NaiveChat](https://gitee.com/itstack/NaiveChat)
 
 ![](https://bugstack.cn/assets/images/2020/project.jpg)
