@@ -1,0 +1,172 @@
+#information{
+    -fx-border-width: 0;
+    -fx-background-color: #f5f5f5;
+}
+
+#info_pane{
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #e7e7e7;
+}
+
+#info_more,#info_more:pressed{
+    -fx-background-size: 43px 43px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("/fxml/chat/img/system/more_0.png");
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+#info_more:hover{
+    -fx-background-image: url("/fxml/chat/img/system/more_1.png");
+}
+
+#info_name{
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #000000;
+    -fx-font-size: 24px;
+    -fx-cursor: hand;
+}
+
+/*对话框*/
+.infoBoxStyle{
+   -fx-background-color: transparent;
+   -fx-border-width: 0;
+}
+
+.infoBoxStyle .scroll-bar:vertical .track,
+.infoBoxStyle .scroll-bar:horizontal .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+
+.infoBoxStyle .scroll-bar:horizontal .increment-button,
+.infoBoxStyle .scroll-bar:horizontal .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 0 0;
+}
+
+.infoBoxStyle .scroll-bar:vertical .increment-button,
+.infoBoxStyle .scroll-bar:vertical .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 -1500 0;
+}
+
+.infoBoxStyle .scroll-bar .increment-button,
+.infoBoxStyle .scroll-bar .decrement-button{
+  -fx-shape: " ";
+  -fx-padding:0;
+}
+
+.infoBoxStyle .scroll-bar:vertical  .thumb,
+.infoBoxStyle .scroll-bar:horizontal  .thumb{
+ -fx-background-color:derive(#c7c6c6, 10%);
+ -fx-background-insets: 2, 0, 0;
+ -fx-background-radius: 1em;
+}
+
+.infoBoxStyle .scroll-bar:vertical,
+.infoBoxStyle .scroll-bar:horizontal{
+   -fx-pref-width: 10;
+   -fx-background-color:transparent;
+}
+
+.infoBoxStyle {
+   -fx-background-color:#f5f5f5;
+}
+
+.infoBoxStyle .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-family: "微软雅黑";
+}
+
+.infoBoxElement{
+    -fx-background-color:transparent;
+}
+
+.box_head{
+   -fx-background-color: #ffffff;
+   -fx-background-image: url("/fxml/chat/img/system/head_default_5050.png");
+}
+
+.box_nikeName{
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #999999;
+    -fx-font-size: 12px;
+    -fx-white-space: nowrap;
+    -fx-overflow: hidden;
+    -fx-text-overflow: ellipsis;
+    -fx-text-align: left;
+}
+
+.box_nikeName_right{
+   -fx-alignment: center-right;
+}
+
+.box_infoContent_arrow{
+    -fx-background-color: #cc0000;
+    -fx-background-radius: 2px;
+    -fx-border-color: #cc0000;
+    -fx-border-width: 1px 0 0 1px;
+    -fx-border-radius: 2px;
+}
+
+.box_infoContent_left{
+    -fx-border-width: 0 1px 1px 0;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-control-inner-background: #ffffff;
+    -fx-control-inner-radius:2px;
+    -fx-background-color: #ffffff;
+    -fx-font-family: "微软雅黑";
+    -fx-font-style: italic;
+    -fx-text-fill: #000000;
+    -fx-font-size: 16px;
+    -fx-white-space: nowrap;
+    -fx-overflow: hidden;
+    -fx-text-overflow: ellipsis;
+    -fx-text-align: left;
+}
+
+.box_infoContent_right{
+    -fx-border-width: 0 1px 1px 0;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-control-inner-background: #9eea6a;
+    -fx-control-inner-radius:2px;
+    -fx-background-color: #9eea6a;
+    -fx-font-family: "微软雅黑";
+    -fx-font-style: italic;
+    -fx-text-fill: #000000;
+    -fx-font-size: 16px;
+    -fx-white-space: nowrap;
+    -fx-overflow: hidden;
+    -fx-text-overflow: ellipsis;
+    -fx-text-align: right;
+    -fx-alignment: center-right;
+}
+
+.box_infoContent_left,.box_infoContent_right{
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.box_infoContent_left .content, .box_infoContent_right .content{
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.box_infoContent_left:focused, .box_infoContent_right:focused{
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.box_infoContent_left, .box_infoContent_left .content,.box_infoContent_left:focused{
+     -fx-background-color: #ffffff;
+}
+
+.box_infoContent_right, .box_infoContent_right .content,.box_infoContent_right:focused{
+     -fx-background-color: #9eea6a;
+}

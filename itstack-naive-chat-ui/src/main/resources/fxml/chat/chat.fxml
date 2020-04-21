@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TextArea?>
+<Pane id="Chat" prefHeight="820.0" prefWidth="1243.0" stylesheets="@css/chat.css"
+      xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <!-- 控制栏 -->
+        <Pane id="bar" prefHeight="820" prefWidth="76">
+            <!-- 头像 -->
+            <Button id="bar_portrait" layoutX="13" layoutY="23" mnemonicParsing="false" prefHeight="50" prefWidth="50"/>
+
+            <!-- 聊天 -->
+            <Button id="bar_chat" layoutX="23" layoutY="100" mnemonicParsing="false" prefHeight="30" prefWidth="30"/>
+
+            <!-- 好友 -->
+            <Button id="bar_friend" layoutX="23" layoutY="160" mnemonicParsing="false" prefHeight="30" prefWidth="30"/>
+
+            <!-- 广场 -->
+            <Button id="bar_location" layoutX="23" layoutY="220" mnemonicParsing="false" prefHeight="30"
+                    prefWidth="30"/>
+
+            <!-- 设置 -->
+            <Button id="bar_set" layoutX="28" layoutY="770" mnemonicParsing="false" prefHeight="20" prefWidth="20"/>
+        </Pane>
+
+        <!-- 组；group_bar_chat -->
+        <Pane visible="true" id="group_bar_chat" layoutX="76" layoutY="1" prefWidth="1166" prefHeight="818" style="-fx-background-color:transparent;-fx-border-width:0;">
+            <children>
+                <!-- 操作栏；最小化、关闭 -->
+                <Pane id="operation" layoutX="314" prefWidth="852" prefHeight="32">
+                    <children>
+                        <Button id="group_bar_chat_min" styleClass="min" layoutX="767" prefWidth="42" prefHeight="32"/>
+                        <Button id="group_bar_chat_close" styleClass="close" layoutX="810" prefWidth="42" prefHeight="32"/>
+                    </children>
+                </Pane>
+                <!-- 搜索栏 -->
+                <Pane styleClass="search" prefHeight="80" prefWidth="314">
+                    <children>
+                        <TextField styleClass="searchInput" layoutX="20" layoutY="30" prefHeight="30" prefWidth="240" promptText="搜索">
+                            <padding>
+                                <Insets left="30"/>
+                            </padding>
+                        </TextField>
+                        <Label styleClass="searchAdd" layoutX="270" layoutY="30" prefHeight="30" prefWidth="30"/>
+                    </children>
+                </Pane>
+                <!-- 会话栏 -->
+                <Pane id="talk" layoutY="80" prefHeight="738" prefWidth="314">
+                    <children>
+                        <ListView id="talkList" prefHeight="738" prefWidth="314" styleClass="talkListStyle"/>
+                    </children>
+                </Pane>
+                <!-- 消息栏；对话名称(昵称、群名称) -->
+                <Pane id="information" layoutX="314" layoutY="32" prefWidth="852" prefHeight="606">
+                    <children>
+                        <Pane id="info_pane" prefWidth="852" prefHeight="44">
+                            <children>
+                                <Label id="info_more" layoutX="800" prefWidth="43" prefHeight="43"/>
+                                <Label id="info_name" layoutX="40" layoutY="-8" prefWidth="400" prefHeight="40"
+                                       text="小傅哥 | bugstack.cn"/>
+                            </children>
+                        </Pane>
+                        <Pane id="info_pane_box" layoutX="1" layoutY="45" prefWidth="850" prefHeight="560" style="-fx-background-color:transparent;-fx-border-width:0;"/>
+                    </children>
+                </Pane>
+                <!-- 工具栏 -->
+                <Pane id="tool" layoutX="314" layoutY="638" prefWidth="852" prefHeight="46">
+                    <children>
+                        <Button id="tool_face" layoutX="20" layoutY="3" prefWidth="40" prefHeight="40"/>
+                    </children>
+                </Pane>
+                <!-- 文本栏 -->
+                <Pane id="txt" layoutX="314" layoutY="684" prefWidth="852" prefHeight="90">
+                    <children>
+                        <TextArea id="txt_input" styleClass="txt_input_style" layoutX="20" prefWidth="813" prefHeight="90"
+                                  wrapText="true"/>
+                    </children>
+                </Pane>
+                <!-- 触达消息[发送] -->
+                <Pane id="touch" layoutX="314" layoutY="775" prefWidth="852" prefHeight="40">
+                    <children>
+                        <Label id="touch_send" layoutX="730" layoutY="4" prefWidth="85" prefHeight="34" text="发送(S)"/>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+
+        <!-- 组；group_bar_friend -->
+        <Pane visible="false" id="group_bar_friend" layoutX="76" layoutY="1" prefWidth="1166" prefHeight="818">
+            <children>
+                <!-- 操作栏；最小化、关闭 -->
+                <Pane id="operation" layoutX="314" prefWidth="852" prefHeight="32">
+                    <children>
+                        <Button id="group_bar_friend_min" styleClass="min" layoutX="767" prefWidth="42" prefHeight="32"/>
+                        <Button id="group_bar_friend_close" styleClass="close" layoutX="810" prefWidth="42" prefHeight="32"/>
+                    </children>
+                </Pane>
+                <!-- 搜索栏 -->
+                <Pane styleClass="search" prefHeight="80" prefWidth="314">
+                    <children>
+                        <TextField styleClass="searchInput" layoutX="20" layoutY="30" prefHeight="30" prefWidth="240" promptText="搜索">
+                            <padding>
+                                <Insets left="30"/>
+                            </padding>
+                        </TextField>
+                        <Label styleClass="searchAdd" layoutX="270" layoutY="30" prefHeight="30" prefWidth="30"/>
+                    </children>
+                </Pane>
+                <!-- 好友栏 -->
+                <Pane id="friend" layoutY="80" prefHeight="738" prefWidth="314">
+                    <children>
+                        <ListView id="friendList" prefHeight="738" prefWidth="314" styleClass="friendListStyle"/>
+                    </children>
+                </Pane>
+                <!-- 内容栏；新的朋友、公众号、群组、好友，明细信息(发送消息按钮) -->
+                <Pane id="content" layoutX="314" layoutY="32" prefWidth="852" prefHeight="606">
+                    <children>
+                        <Pane id="content_pane" prefWidth="852" prefHeight="44">
+                            <children>
+                                <Label id="content_name" layoutX="40" layoutY="-8" prefWidth="400" prefHeight="40"
+                                       text="加载..."/>
+                            </children>
+                        </Pane>
+                        <Pane id="content_pane_box" layoutX="1" layoutY="45" prefWidth="850" prefHeight="560" style="-fx-background-color:transparent;-fx-border-width:0;"/>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        
+    </children>
+
+</Pane>

@@ -1,0 +1,17 @@
+#tool{
+    -fx-border-width: 0;
+    -fx-border-color: #ececec;
+    -fx-background-color: white;
+}
+
+#tool_face,#tool_face:pressed{
+    -fx-background-size: 40px 40px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("/fxml/chat/img/system/face_0.png");
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+#tool_face:hover{
+    -fx-background-image: url("/fxml/chat/img/system/face_1.png");
+}

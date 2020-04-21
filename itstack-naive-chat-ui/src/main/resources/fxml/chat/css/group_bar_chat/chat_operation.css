@@ -1,0 +1,35 @@
+#operation{
+    -fx-background-color: #f5f5f5;
+}
+
+.close,.close:pressed{
+    -fx-background-radius: 2px;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 43px 34px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("/fxml/chat/img/system/close_0.png");
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.close:hover{
+    -fx-background-color: #f45454;
+    -fx-background-image: url("/fxml/chat/img/system/close_1.png");
+}
+
+.min,.min:pressed{
+    -fx-background-radius: 2px;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 43px 34px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("/fxml/chat/img/system/min_0.png");
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.min:hover{
+    -fx-background-color: derive(#c7c6c6, 10%);
+    -fx-background-image: url("/fxml/chat/img/system/min_1.png");
+}

@@ -1,0 +1,44 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<Pane id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefWidth="540" prefHeight="415" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/8.0.121"
+      xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+
+        <!-- 操作栏；最小化、关闭 -->
+        <Pane id="operation" prefWidth="540" prefHeight="158">
+            <children>
+                <Label id="login_logo" styleClass="logo" layoutX="10" layoutY="5" prefWidth="200" prefHeight="15" text="憨憨语约" style="-fx-text-fill:#666666;"/>
+                <Button id="login_min" styleClass="min" layoutX="454" prefWidth="43" prefHeight="32"/>
+                <Button id="login_close" styleClass="close" layoutX="497" prefWidth="43" prefHeight="32"/>
+            </children>
+        </Pane>
+
+        <!-- 头像 -->
+        <Pane id="headImg" layoutX="80" layoutY="200" prefWidth="100" prefHeight="100"/>
+
+        <TextField id="userId" layoutX="200" layoutY="200" prefWidth="250" prefHeight="45" promptText="账号">
+            <padding>
+                <Insets left="10"/>
+            </padding>
+        </TextField>
+
+        <PasswordField id="userPassword" layoutX="200" layoutY="255" prefWidth="250" prefHeight="45" promptText="密码">
+            <padding>
+                <Insets left="10"/>
+            </padding>
+        </PasswordField>
+
+        <Button id="login_button" styleClass="login_button" layoutX="200" layoutY="345" prefWidth="250" prefHeight="45" text="登 陆"/>
+
+        <Label id="slogan" layoutX="5" layoutY="398" prefWidth="400" prefHeight="15"
+               text="v1.0 小傅哥 | https://bugstack.cn">
+            <font>
+                <Font size="12"/>
+            </font>
+        </Label>
+    </children>
+
+</Pane>
