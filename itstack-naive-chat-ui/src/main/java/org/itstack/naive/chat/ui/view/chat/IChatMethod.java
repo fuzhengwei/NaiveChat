@@ -44,12 +44,12 @@ public interface IChatMethod {
      * @param talkId   对话框ID[用户ID]
      * @param msg      消息
      * @param msgType  消息类型；0文字消息、1固定表情
-     * @param msgData  时间
+     * @param msgDate  时间
      * @param idxFirst 是否设置首位
      * @param selected 是否选中
      * @param isRemind 是否提醒
      */
-    void addTalkMsgUserLeft(String talkId, String msg, Integer msgType, Date msgData, Boolean idxFirst, Boolean selected, Boolean isRemind);
+    void addTalkMsgUserLeft(String talkId, String msg, Integer msgType, Date msgDate, Boolean idxFirst, Boolean selected, Boolean isRemind);
 
     /**
      * 填充对话框消息-群组[别人的消息]
