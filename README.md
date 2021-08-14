@@ -32,7 +32,7 @@
 
 **源码地址**：
 - [https://github.com/fuzhengwei/NaiveChat](https://github.com/fuzhengwei/NaiveChat)
-- [https://gitee.com/itstack/NaiveChat](https://gitee.com/itstack/NaiveChat)
+- [https://gitee.com/fustack/NaiveChat](https://gitee.com/fustack/NaiveChat)
 
 ## 二、功能概述
 
