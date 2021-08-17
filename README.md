@@ -7,7 +7,7 @@
 > **作者：** 小傅哥，Java Developer，[:trophy: CSDN 博客专家](https://bugstack.blog.csdn.net)，[:pencil2: 虫洞 · 科技栈，作者](https://bugstack.cn)
 
 **如何支持：**
- - 关注公众号 [bugstack虫洞栈](https://itstack.org/_media/qrcode.png?x-oss-process=style/may)
+ - 关注公众号 [bugstack虫洞栈](https://bugstack.cn/assets/images/qrcode.png)
  - 点击右上角Star :star: 给予关注
  - 赏个鸡腿🍗
 
@@ -76,13 +76,18 @@
 
 ## 五、与我联系
 
-- **加群交流**
-本群的宗旨是给大家提供一个良好的技术学习交流平台，所以杜绝一切广告！由于微信群人满 100 之后无法加入，请扫描下方二维码先添加作者 “小傅哥” 微信，备注：加群。
-<img src="https://itstack.org/_media/fustack.png?x-oss-process=style/may" width="180" height="180"/>
 
-- **公众号**
-沉淀、分享、成长，专注于原创专题案例，以最易学习编程的方式分享知识，让自己和他人都能有所收获。目前已完成的专题有；Netty4.x实战专题案例、用Java实现JVM、基于JavaAgent的全链路监控、手写RPC框架、DDD专题案例、源码分析等。
-<img src="https://itstack.org/_media/qrcode.png?x-oss-process=style/may" width="180" height="180"/>
+- **加群交流**
+
+    本群的宗旨是给大家提供一个良好的技术学习交流平台，所以杜绝一切广告！由于微信群人满 100 之后无法加入，请扫描下方二维码先添加作者 “小傅哥” 微信(fustack)，备注：`Spring学习加群`。
+    
+    <img src="https://itedus.cn/_media/fustack.png?x-oss-process=style/may" width="180" height="180"/>
+
+- **公众号(bugstack虫洞栈)**
+
+    沉淀、分享、成长，专注于原创专题案例，以最易学习编程的方式分享知识，让自己和他人都能有所收获。目前已完成的专题有；Netty4.x实战专题案例、用Java实现JVM、基于JavaAgent的全链路监控、手写RPC框架、DDD专题案例、源码分析等。
+    
+    <img src="https://itedus.cn/_media/qrcode.png?x-oss-process=style/may" width="180" height="180"/>
 
 ## 六、参与贡献
 
