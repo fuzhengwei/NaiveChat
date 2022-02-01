@@ -103,7 +103,7 @@
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
-            <version>1.4.10</version>
+            <version>1.4.19</version>
         </dependency>
         <!-- Netty 4.1.36 -->
         <dependency>
