@@ -22,16 +22,13 @@ public abstract class MyBizHandler<T> extends SimpleChannelInboundHandler<T> {
 
     protected UserService userService;
 
+    public MyBizHandler(){
+    }
+
     public MyBizHandler(UserService userService) {
         this.userService = userService;
     }
 
-    @Override
-    protected void channelRead0(ChannelHandlerContext ctx, T msg) throws Exception {
-        channelRead(ctx.channel(), msg);
-    }
-
-    public abstract void channelRead(Channel channel, T msg);
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {

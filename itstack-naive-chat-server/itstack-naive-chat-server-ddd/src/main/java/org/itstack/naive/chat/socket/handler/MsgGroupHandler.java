@@ -1,6 +1,8 @@
 package org.itstack.naive.chat.socket.handler;
 
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandler;
+import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.group.ChannelGroup;
 import org.itstack.naive.chat.application.UserService;
 import org.itstack.naive.chat.domain.user.model.ChatRecordInfo;
@@ -18,18 +20,25 @@ import org.itstack.naive.chat.socket.MyBizHandler;
  * <p>
  * 群组消息发送
  */
+@ChannelHandler.Sharable
 public class MsgGroupHandler extends MyBizHandler<MsgGroupRequest> {
 
-    public MsgGroupHandler(UserService userService) {
-        super(userService);
+    private static final MsgGroupHandler msgGroupHandler = new MsgGroupHandler();
+
+    private MsgGroupHandler() {
+    }
+
+    public static MsgGroupHandler getInstance(UserService userService){
+        msgGroupHandler.userService = userService;
+        return msgGroupHandler;
     }
 
     @Override
-    public void channelRead(Channel channel, MsgGroupRequest msg) {
+    public void channelRead0(ChannelHandlerContext ctx, MsgGroupRequest msg) {
         // 获取群组通信管道
         ChannelGroup channelGroup = SocketChannelUtil.getChannelGroup(msg.getTalkId());
         if (null == channelGroup) {
-            SocketChannelUtil.addChannelGroup(msg.getTalkId(), channel);
+            SocketChannelUtil.addChannelGroup(msg.getTalkId(), ctx.channel());
             channelGroup = SocketChannelUtil.getChannelGroup(msg.getTalkId());
         }
         // 异步写库

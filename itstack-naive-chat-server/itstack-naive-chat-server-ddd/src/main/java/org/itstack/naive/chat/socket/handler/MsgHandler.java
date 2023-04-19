@@ -2,6 +2,8 @@ package org.itstack.naive.chat.socket.handler;
 
 import com.alibaba.fastjson.JSON;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandler;
+import io.netty.channel.ChannelHandlerContext;
 import org.itstack.naive.chat.application.UserService;
 import org.itstack.naive.chat.domain.user.model.ChatRecordInfo;
 import org.itstack.naive.chat.infrastructure.common.Constants;
@@ -18,14 +20,21 @@ import org.itstack.naive.chat.socket.MyBizHandler;
  * <p>
  * 消息信息处理
  */
+@ChannelHandler.Sharable
 public class MsgHandler extends MyBizHandler<MsgRequest> {
 
-    public MsgHandler(UserService userService) {
-        super(userService);
+    private static final MsgHandler msgHandler = new MsgHandler();
+
+    private MsgHandler() {
+    }
+
+    public static MsgHandler getInstance(UserService userService){
+        msgHandler.userService = userService;
+        return msgHandler;
     }
 
     @Override
-    public void channelRead(Channel channel, MsgRequest msg) {
+    public void channelRead0(ChannelHandlerContext ctx, MsgRequest msg) {
         logger.info("消息信息处理：{}", JSON.toJSONString(msg));
         // 异步写库
         userService.asyncAppendChatRecord(new ChatRecordInfo(msg.getUserId(), msg.getFriendId(), msg.getMsgText(), msg.getMsgType(), msg.getMsgDate()));

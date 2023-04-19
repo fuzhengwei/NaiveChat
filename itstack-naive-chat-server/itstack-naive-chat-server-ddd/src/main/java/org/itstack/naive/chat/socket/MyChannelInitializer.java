@@ -25,14 +25,15 @@ public class MyChannelInitializer extends ChannelInitializer<SocketChannel> {
         //对象传输处理[解码]
         channel.pipeline().addLast(new ObjDecoder());
         // 在管道中添加我们自己的接收数据实现方法
-        channel.pipeline().addLast(new AddFriendHandler(userService));
-        channel.pipeline().addLast(new DelTalkHandler(userService));
-        channel.pipeline().addLast(new LoginHandler(userService));
-        channel.pipeline().addLast(new MsgGroupHandler(userService));
-        channel.pipeline().addLast(new MsgHandler(userService));
-        channel.pipeline().addLast(new ReconnectHandler(userService));
-        channel.pipeline().addLast(new SearchFriendHandler(userService));
-        channel.pipeline().addLast(new TalkNoticeHandler(userService));
+//        channel.pipeline().addLast(AddFriendHandler.getInstance(userService));
+//        channel.pipeline().addLast(DelTalkHandler.getInstance(userService));
+//        channel.pipeline().addLast(LoginHandler.getInstance(userService));
+//        channel.pipeline().addLast(MsgGroupHandler.getInstance(userService));
+//        channel.pipeline().addLast(MsgHandler.getInstance(userService));
+//        channel.pipeline().addLast(ReconnectHandler.getInstance(userService));
+//        channel.pipeline().addLast(SearchFriendHandler.getInstance(userService));
+//        channel.pipeline().addLast(TalkNoticeHandler.getInstance(userService));
+        channel.pipeline().addLast(IMHandler.getINSTANCE(userService));
         //对象传输处理[编码]
         channel.pipeline().addLast(new ObjEncoder());
     }

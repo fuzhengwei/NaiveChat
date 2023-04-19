@@ -2,6 +2,8 @@ package org.itstack.naive.chat.socket.handler;
 
 import com.alibaba.fastjson.JSON;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandler;
+import io.netty.channel.ChannelHandlerContext;
 import org.itstack.naive.chat.application.UserService;
 import org.itstack.naive.chat.domain.user.model.*;
 import org.itstack.naive.chat.infrastructure.common.Constants;
@@ -24,29 +26,36 @@ import java.util.List;
  * <p>
  * 登陆请求处理
  */
+@ChannelHandler.Sharable
 public class LoginHandler extends MyBizHandler<LoginRequest> {
 
-    public LoginHandler(UserService userService) {
-        super(userService);
+    private static final LoginHandler loginHandler = new LoginHandler();
+
+    private LoginHandler() {
+    }
+
+    public static LoginHandler getInstance(UserService userService){
+        loginHandler.userService = userService;
+        return loginHandler;
     }
 
     @Override
-    public void channelRead(Channel channel, LoginRequest msg) {
+    public void channelRead0(ChannelHandlerContext ctx, LoginRequest msg) {
         logger.info("登陆请求处理：{} ", JSON.toJSONString(msg));
         // 1. 登陆失败返回false
         boolean auth = userService.checkAuth(msg.getUserId(), msg.getUserPassword());
         if (!auth) {
             // 传输消息
-            channel.writeAndFlush(new LoginResponse(false));
+            ctx.channel().writeAndFlush(new LoginResponse(false));
             return;
         }
         // 2. 登陆成功绑定Channel
         // 2.1 绑定用户ID
-        SocketChannelUtil.addChannel(msg.getUserId(), channel);
+        SocketChannelUtil.addChannel(msg.getUserId(), ctx.channel());
         // 2.2 绑定群组
         List<String> groupsIdList = userService.queryUserGroupsIdList(msg.getUserId());
         for (String groupId : groupsIdList) {
-            SocketChannelUtil.addChannelGroup(groupId, channel);
+            SocketChannelUtil.addChannelGroup(groupId, ctx.channel());
         }
         // 3. 反馈消息；用户信息、用户对话框列表、好友列表、群组列表
         // 组装消息包
@@ -136,7 +145,7 @@ public class LoginHandler extends MyBizHandler<LoginRequest> {
         loginResponse.setUserNickName(userInfo.getUserNickName());
         loginResponse.setUserHead(userInfo.getUserHead());
         // 传输消息
-        channel.writeAndFlush(loginResponse);
+        ctx.channel().writeAndFlush(loginResponse);
     }
 
 }
