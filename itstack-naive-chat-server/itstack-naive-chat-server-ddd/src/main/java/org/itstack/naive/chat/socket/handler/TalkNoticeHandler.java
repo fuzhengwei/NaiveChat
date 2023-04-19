@@ -2,6 +2,7 @@ package org.itstack.naive.chat.socket.handler;
 
 import com.alibaba.fastjson.JSON;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import org.itstack.naive.chat.application.UserService;
@@ -23,14 +24,21 @@ import java.util.Date;
  * <p>
  * 对话通知应答处理
  */
+@ChannelHandler.Sharable
 public class TalkNoticeHandler extends MyBizHandler<TalkNoticeRequest> {
 
-    public TalkNoticeHandler(UserService userService) {
-        super(userService);
+    private static final TalkNoticeHandler talkNoticeHandler = new TalkNoticeHandler();
+
+    private TalkNoticeHandler() {
+    }
+
+    public static TalkNoticeHandler getInstance(UserService userService){
+        talkNoticeHandler.userService = userService;
+        return talkNoticeHandler;
     }
 
     @Override
-    public void channelRead(Channel channel, TalkNoticeRequest msg) {
+    public void channelRead0(ChannelHandlerContext ctx, TalkNoticeRequest msg) {
         logger.info("对话通知应答处理：{}", JSON.toJSONString(msg));
 
         switch (msg.getTalkType()) {
